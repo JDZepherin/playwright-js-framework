@@ -3,7 +3,7 @@ const {setWorldConstructor, Before, After, BeforeAll, AfterAll}=require('@cucumb
 const {chromium}=require('playwright');
 let browser;
 BeforeAll(async()=>{
-    browser=await chromium.launch({headless:false});
+    browser=await chromium.launch({headless:true});
 });
 AfterAll(async()=>{
 if(browser){

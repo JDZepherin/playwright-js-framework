@@ -11,7 +11,7 @@ let page;
 let loginPage;
 let homePage;
 before(async()=>{
-    browser=await chromium.launch({headless:false,slomo:500});
+    browser=await chromium.launch({headless:true,slomo:500});
 })
 beforeEach(async()=>{
     context=await browser.newContext();
