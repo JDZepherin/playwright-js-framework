@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-29T13:35:06.245Z",
+    "end": "2026-07-29T13:35:13.298Z",
+    "duration": 7053,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5f8e2948-da3b-4806-9ecd-2adc5b502285",
+      "title": "",
+      "fullFile": "E:\\playwright-js-framework\\mocha-test\\specs\\login.spec.js",
+      "file": "\\mocha-test\\specs\\login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c738994-599e-413b-b169-b2024259c253",
+          "title": "Login Authentication Suite-Mocha Framework",
+          "fullFile": "E:\\playwright-js-framework\\mocha-test\\specs\\login.spec.js",
+          "file": "\\mocha-test\\specs\\login.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Login Authentication Suite-Mocha Framework\"",
+              "fullTitle": "Login Authentication Suite-Mocha Framework \"before all\" hook in \"Login Authentication Suite-Mocha Framework\"",
+              "timedOut": false,
+              "duration": 273,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "browser=await chromium.launch({headless:false,slomo:500});",
+              "err": {},
+              "uuid": "3ea381d4-f784-4f1c-9492-c025f8cdc2a8",
+              "parentUUID": "3c738994-599e-413b-b169-b2024259c253",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook in \"Login Authentication Suite-Mocha Framework\"",
+              "fullTitle": "Login Authentication Suite-Mocha Framework \"before each\" hook in \"Login Authentication Suite-Mocha Framework\"",
+              "timedOut": false,
+              "duration": 1529,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "context=await browser.newContext();\npage=await context.newPage();\nloginPage=new LoginPage(page);\nhomePage=new HomePage(page);\nawait loginPage.navigateTo(\"https://naveenautomationlabs.com/opencart/\");\nawait homePage.clickMyAccBtn();\nawait homePage.openLoginPage();",
+              "err": {},
+              "uuid": "1f2fa6b8-9074-4a11-bcee-871114080fc2",
+              "parentUUID": "3c738994-599e-413b-b169-b2024259c253",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Login Authentication Suite-Mocha Framework\"",
+              "fullTitle": "Login Authentication Suite-Mocha Framework \"after all\" hook in \"Login Authentication Suite-Mocha Framework\"",
+              "timedOut": false,
+              "duration": 278,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if(browser){\nawait browser.close();\n}",
+              "err": {},
+              "uuid": "1d638dbc-d08b-4f8b-b64e-f75b35018cff",
+              "parentUUID": "3c738994-599e-413b-b169-b2024259c253",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"Login Authentication Suite-Mocha Framework\"",
+              "fullTitle": "Login Authentication Suite-Mocha Framework \"after each\" hook in \"Login Authentication Suite-Mocha Framework\"",
+              "timedOut": false,
+              "duration": 31,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if(this.currentTest && this.currentTest.state==='failed'){\nawait page.screenshot({path:`screenshots/failed-${this.currentTest.title}.png`});\n}\nif(page){\n    await page.close();\n}\nif(context){\n    await context.close();\n}",
+              "err": {},
+              "uuid": "181c4f0b-93b9-4e3b-9cca-e5f60b8bec9a",
+              "parentUUID": "3c738994-599e-413b-b169-b2024259c253",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should login with valid login",
+              "fullTitle": "Login Authentication Suite-Mocha Framework should login with valid login",
+              "timedOut": false,
+              "duration": 395,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await loginPage.login(\"dhanrajzepherin007@gmail.com\",\"qwertyui\");\nconst title = await loginPage.getTitle();\nawait expect(title).to.include('My Account');",
+              "err": {},
+              "uuid": "dee9b192-b2e7-4f3b-b860-5f7a0e903bf9",
+              "parentUUID": "3c738994-599e-413b-b169-b2024259c253",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display warning for invalid credentials",
+              "fullTitle": "Login Authentication Suite-Mocha Framework should display warning for invalid credentials",
+              "timedOut": false,
+              "duration": 373,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await loginPage.login(\"dhanrajzepherin08@gmail.com\",\"qwertyui.\");\nconst errorText =await loginPage.getErrorMessage(); \nawait expect(errorText).to.be.oneOf([\" Warning: No match for E-Mail Address and/or Password.\",\" Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.\"]);",
+              "err": {},
+              "uuid": "f9f669f2-e6aa-46f7-98dc-795025f04dd4",
+              "parentUUID": "3c738994-599e-413b-b169-b2024259c253",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display warning for empty credentials",
+              "fullTitle": "Login Authentication Suite-Mocha Framework should display warning for empty credentials",
+              "timedOut": false,
+              "duration": 281,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await loginPage.login(\"\",\"\");\nconst errorText =await loginPage.getErrorMessage(); \nawait expect(errorText).to.be.oneOf([\" Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.\",\" Warning: No match for E-Mail Address and/or Password.\"]);",
+              "err": {},
+              "uuid": "3b1192c9-f176-4981-b0e2-2a9c98ff1210",
+              "parentUUID": "3c738994-599e-413b-b169-b2024259c253",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dee9b192-b2e7-4f3b-b860-5f7a0e903bf9",
+            "f9f669f2-e6aa-46f7-98dc-795025f04dd4",
+            "3b1192c9-f176-4981-b0e2-2a9c98ff1210"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1049,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "[date-time]-[status]-mocha-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/mocha",
+        "reportFilename": "[date-time]-[status]-mocha-report",
+        "quiet": "true",
+        "html": "true",
+        "json": "true",
+        "timestamp": "longDate",
+        "overwrite": "false"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

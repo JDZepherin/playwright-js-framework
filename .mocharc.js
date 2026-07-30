@@ -1,0 +1,14 @@
+module.exports={
+    spec:['mocha-test/specs/**/*.spec.js'],
+    timeout:60000,
+    reporter:'mochawesome',
+    'reporter-option':[
+    'reportDir=reports/mocha',
+    'reportFilename=[date-time]-[status]-mocha-report',
+    'quiet=true',
+    'html=true',
+    'json=true',
+    'timestamp=longDate',
+    'overwrite=false'
+    ]
+};

@@ -1,0 +1,15 @@
+module.exports={
+    default:{
+        paths:['cucumber-test/features/**/*.feature'],
+        require:[
+            'cucumber-test/support/**/*.js',
+            'cucumber-test/step-definitions/**/*.js'
+        ],
+        format:[
+            'progress',
+            'html:reports/cucumber/cucumber-report.html',
+            'json:reports/cucumber/cucumber-report.json'
+        ],
+        parallel:2
+    }
+};

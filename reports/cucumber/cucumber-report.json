@@ -1,0 +1,211 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-as-registered-user-and-access-homepage;logging-in-with-valid-and-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 9,
+        "name": "Logging in with valid and invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 533105900
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1479362400
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I navigate to login page",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 431873599
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I attempt to login with username \"dhanrajzepherin007@gmail.com\" and password \"qwertyui\"",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:17"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 52035500
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should see the login result as \"success\"",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:22"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 70353200
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-as-registered-user-and-access-homepage;logging-in-with-valid-and-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 10,
+        "name": "Logging in with valid and invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 533701099
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1501473700
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I navigate to login page",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 348328700
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I attempt to login with username \"wrnviowv\" and password \"sdjsdjn\"",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:17"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36825100
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should see the login result as \"failure\"",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:22"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 49526300
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-as-registered-user-and-access-homepage;logging-in-with-valid-and-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Logging in with valid and invalid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 331292300
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1254398900
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I navigate to login page",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:9"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 267712199
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I attempt to login with username \"\" and password \"\"",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:17"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 29855400
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should see the login result as \"failure\"",
+            "match": {
+              "location": "cucumber-test\\step-definitions\\login.steps.js:22"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 27113099
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-as-registered-user-and-access-homepage",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login as registered user and access Homepage",
+    "tags": [],
+    "uri": "cucumber-test\\features\\login.feature"
+  }
+]
