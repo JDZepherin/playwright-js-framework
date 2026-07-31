@@ -1,7 +1,8 @@
-const{Given,When,Then}=require('@cucumber/cucumber');
+const{Given,When,Then, setDefaultTimeout}=require('@cucumber/cucumber');
 //npx cucumber-js features/**/*.feature --require cucumber.config.js --require features/step_definitions/**/*.js
 //const{createBdd}=require{'playwright-bdd'}
 //const{Given,When,Then}=createBdd();
+setDefaultTimeout(60000);
 const{expect}=require('chai');
 const HomePage =require('../../pages/HomePage');
 const LoginPage =require('../../pages/LoginPage');

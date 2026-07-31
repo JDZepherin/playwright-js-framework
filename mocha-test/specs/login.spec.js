@@ -2,7 +2,7 @@ const {chromium}=require('playwright');
 const {expect}=require('chai');
 const HomePage =require('../../pages/HomePage');
 const LoginPage =require('../../pages/LoginPage');
-const {it}= require('mocha');
+const {describe, it}= require('mocha');
 describe('Login Authentication Suite-Mocha Framework',function(){
 this.timeout(60000);
 let browser;
