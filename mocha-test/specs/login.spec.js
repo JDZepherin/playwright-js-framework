@@ -14,7 +14,7 @@ before(async()=>{
     browser=await chromium.launch({headless:true,slomo:500});
 })
 beforeEach(async()=>{
-    context=await browser.newContext();
+    context=await browser.newContext({viewport: {width:1280, height:720}, recordVideo:{dir:'videos/'}});
     page=await context.newPage();
     loginPage=new LoginPage(page);
     homePage=new HomePage(page);

@@ -19,8 +19,10 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
+    - name: Run Playwright-Mocha tests
       run: xvfb-run npx playwright test
+    - name: Run Playwright-Cucumber test
+      run: xvfb-run npx cucumber-js
     - name: Upload Test Report Artifacts
       uses: actions/upload-artifact@v4.4.0
       if: always()
