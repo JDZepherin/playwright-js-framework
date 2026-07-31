@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout repository
-      uses: actions/checkout@v4.2.2
+      uses: actions/checkout@v4
     - name: Setup Node.js Environment
-      uses: actions/setup-node@v4.1.0
+      uses: actions/setup-node@v4
       with:
         node-version: 24.15.0
     - name: Install dependencies
@@ -24,7 +24,7 @@ jobs:
     - name: Run Playwright-Cucumber test
       run: xvfb-run npx cucumber-js
     - name: Upload Test Report Artifacts
-      uses: actions/upload-artifact@v4.4.0
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: test-execution-reports
