@@ -2,7 +2,8 @@ const {chromium}=require('playwright');
 const {expect}=require('chai');
 const HomePage =require('../../pages/HomePage');
 const LoginPage =require('../../pages/LoginPage');
-const {it} = require('mocha');
+const {describe, it}= require('mocha');
+//the following error is not an actual error
 describe('Login Authentication Suite-Mocha Framework',function(){
 this.timeout(60000);
 let browser;
@@ -11,10 +12,10 @@ let page;
 let loginPage;
 let homePage;
 before(async()=>{
-    browser=await chromium.launch({headless:false,slomo:500});
+    browser=await chromium.launch({headless:true,slomo:500});
 })
 beforeEach(async()=>{
-    context=await browser.newContext();
+    context=await browser.newContext({viewport: {width:1280, height:720}, recordVideo:{dir:'videos/'}});
     page=await context.newPage();
     loginPage=new LoginPage(page);
     homePage=new HomePage(page);

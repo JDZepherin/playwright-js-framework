@@ -1,6 +1,6 @@
 const {chromium} = require('playwright');
 (async ()=>{
-    const browser = await chromium.launch({headless:false, slomo:1000});
+    const browser = await chromium.launch({headless:true, slomo:1000});
     const context = await browser.newContext({viewport: {width:1280, height:720}, recordVideo:{dir:'videos/'}})
     const page = await context.newPage();
 

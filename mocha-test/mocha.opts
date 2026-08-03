@@ -1,0 +1,4 @@
+--require ts-node/register
+--spec mocha-test/specs/**/*.spec.js
+--timeout 10000
+--reporter spec

@@ -3,7 +3,7 @@ const {setWorldConstructor, Before, After, BeforeAll, AfterAll}=require('@cucumb
 const {chromium}=require('playwright');
 let browser;
 BeforeAll(async()=>{
-    browser=await chromium.launch({headless:false});
+    browser=await chromium.launch({headless:true,slomo:500});
 });
 AfterAll(async()=>{
 if(browser){
@@ -16,7 +16,7 @@ class CustomWorld{
         this.parameters=parameters;
     }
 async init(){
-    this.context=await browser.newContext();
+    this.context=await browser.newContext({viewport: {width:1280, height:720}, recordVideo:{dir:'videos/'}});
     this.page=await this.context.newPage();
 }
 async cleanup(){
