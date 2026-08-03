@@ -3,6 +3,7 @@ const {expect}=require('chai');
 const HomePage =require('../../pages/HomePage');
 const LoginPage =require('../../pages/LoginPage');
 const {describe, it}= require('mocha');
+//the following error is not an actual error
 describe('Login Authentication Suite-Mocha Framework',function(){
 this.timeout(60000);
 let browser;
